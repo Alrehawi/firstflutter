@@ -74,3 +74,13 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
+  # Check out https://docs.codemagic.io/getting-started/yaml/ for more information
+
+workflows:
+    flutter-package:
+        name: Flutter or Dart Package
+        environment:
+            flutter: dev
+        scripts:
+            - flutter packages pub get
+            - flutter test
